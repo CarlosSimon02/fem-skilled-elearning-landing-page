@@ -263,7 +263,7 @@ button {
 }
 
 .main__content__desc {
-    max-width: 29rem;
+    max-width: 29.2rem;
 }
 
 .main__content__desc h1 {
@@ -272,6 +272,7 @@ button {
 
 .main__content__desc p {
     margin-bottom: 1.5rem;
+    max-width: 34ch;
 }
 
 /* image hero */
