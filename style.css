@@ -186,7 +186,7 @@ button {
     border-radius: 9999rem;
     padding-inline: 1.5rem;
     padding-block: .625rem;
-    line-height: 1.75;
+    line-height: 1.75rem;
     color: var(--clr-primary);
     font-weight: var(--fw-bold);
 }
@@ -216,6 +216,8 @@ button {
 
 .button-footer {
     background: var(--bg-gradient-2);
+    background-position: bottom;
+    background-size: 100% 150%;
 }
 
 .button-footer:hover {
@@ -224,6 +226,19 @@ button {
         hsla(0, 0%, 100%, 50%)
     ), 
     var(--bg-gradient-2);
+}
+
+@media (min-width: 48em) {
+    button {
+        padding-inline: clamp(1.5rem, 3.448vw + -0.155rem, 2rem);
+        padding-block: clamp(0.625rem, 1.724vw + -0.203rem, 0.875rem);
+    }
+
+    .button-main {
+        padding-inline: clamp(2rem, -2.586vw + 3.616rem, 2.375rem);
+        padding-block: clamp(0.938rem, 1.293vw + 0.317rem, 1.125rem);
+        line-height: clamp(1.625rem, 0.862vw + 1.211rem, 1.75rem);
+    }
 }
 
 /* header */
@@ -463,6 +478,15 @@ button {
 
     .main__courses__item {
         flex-basis: 18rem;
+        gap: clamp(1.5rem, 3.448vw + -0.155rem, 2rem);
+    }
+
+    .main__courses__item__content>h4 {
+        margin-bottom: clamp(1rem, 3.448vw + -0.655rem, 1.5rem);
+    }
+
+    .main__courses__item:nth-child(1) {
+        padding-top: clamp(3.5rem, 3.448vw + 1.845rem, 4rem);
     }
 }
 
