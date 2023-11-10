@@ -235,6 +235,7 @@ button {
 /* main */
 .main {
     padding-block-start: 1.5rem;
+    overflow-x: clip;
 }
 
 .main__content>.wrapper {
@@ -390,6 +391,12 @@ button {
     .main__content__hero-image__members {
         width: clamp(6.563rem, 21.552vw + -3.782rem, 9.688rem);
         margin-top: clamp(0rem, 44.397vw + -21.31rem, 6.438rem);
+    }
+}
+
+@media (min-width: 90em) {
+    .main__content__hero-image__circle::before {
+        --h: clamp(63rem, 87.857vw + -16.071rem, 93.75rem);
     }
 }
 
