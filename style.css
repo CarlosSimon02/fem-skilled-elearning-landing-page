@@ -1,0 +1,335 @@
+:root {
+    --clr-primary: hsl(0, 0%, 100%);
+    --clr-secondary-1: hsl(233, 54%, 16%);
+    --clr-secondary-2: hsl(234, 25%, 52%);
+    --clr-secondary-body: hsl(232, 10%, 56%);
+    --clr-accent-1: hsl(341, 92%, 62%);
+    --clr-accent-2: hsl(341, 100%, 83%);
+    --bg-gradient-1: linear-gradient(
+        hsl(13, 100%, 64%),
+        hsl(322, 87%, 55%)       
+    );
+    --bg-gradient-2: linear-gradient(
+        hsl(237, 100%, 64%),
+        hsl(322, 87%, 55%)
+    );
+    --bg-gradient-3: linear-gradient(
+        var(--clr-primary),
+        hsl(236, 100%, 97%)
+    );
+
+    --ff-main: 'Plus Jakarta Sans', sans-serif;
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fw-extra-bold: 800;
+}
+
+/* resets */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* typography */
+body {
+    font-family: var(--ff-main);
+    color: var(--clr-secondary-body);
+    line-height: 1.625;
+    font-weight: var(--fw-medium);
+    font-size: 1rem;
+}
+
+h1,
+h2, 
+h3,
+h4 {
+    color: var(--clr-secondary-1);
+    font-weight: var(--fw-extra-bold);
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.275;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1.25;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 1.33333;
+    color: inherit;
+}
+
+h4 {
+    font-size: 1.25rem;
+    line-height: 1.25;
+}
+
+.label p {
+    font-size: 0.875rem;
+    line-height: 2;
+    font-weight: var(--fw-bold);
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-accent-1);
+    font-weight: var(--fw-bold);
+    font-size: 1.125rem;
+}
+
+a:hover {
+    color: var(--clr-accent-2);
+}
+
+/* utilities */
+.wrapper {
+    max-width: 69.375rem;
+    padding-inline: clamp(1rem, 6.107vw + -0.431rem, 2.5rem);
+    margin-inline: auto;
+}
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bar img {
+    width: 5.5625rem;
+    height: auto;
+}
+
+/* buttons */
+button {
+    cursor: pointer;
+    border-style: none;
+    border-radius: 9999rem;
+    padding-inline: 1.5rem;
+    padding-block: .625rem;
+    line-height: 1.75;
+    color: var(--clr-primary);
+    font-weight: var(--fw-bold);
+}
+
+.button-header {
+    background-color: var(--clr-secondary-1);
+}
+
+.button-header:hover {
+    background-color: var(--clr-secondary-2);
+}
+
+.button-main {
+    padding-inline: 2.375rem;
+    padding-block: .9375rem;
+    line-height: 1.625;
+    background: var(--bg-gradient-1);
+}
+
+.button-main:hover {
+    background: linear-gradient(
+        hsla(0, 0%, 100%, 50%),
+        hsla(0, 0%, 100%, 50%)
+    ), 
+    var(--bg-gradient-1);
+}
+
+.button-footer {
+    background: var(--bg-gradient-2);
+}
+
+.button-footer:hover {
+    background: linear-gradient(
+        hsla(0, 0%, 100%, 50%),
+        hsla(0, 0%, 100%, 50%)
+    ), 
+    var(--bg-gradient-2);
+}
+
+/* header */
+.header {
+    padding-block: 1rem;
+}
+
+/* main */
+.main {
+    padding-block-start: 1.5rem;
+}
+
+.main__content>.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2.875rem;
+    margin-block-end: 2.625rem;
+    align-items: center;
+}
+
+.main__content__desc {
+    max-width: 28.5625rem;
+    display: grid;
+    justify-items: start;
+    gap: 1.5rem;
+}
+
+/* image hero */
+.main__content__hero-image {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding-inline: .5rem;
+    margin-inline: auto;
+}
+
+.main__content__hero-image .label {
+    padding-inline: 1.25rem;
+    padding-block: 1rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 2.125rem 3.375rem 0 hsla(233, 92%, 29%, 15.89%);
+    background-color: var(--clr-primary);
+}
+
+.main__content__hero-image__course-hours {
+    align-self: end;
+    padding-inline-end: 4.5rem;
+    width: 9.6875rem;
+}
+
+.main__content__hero-image__circle {
+    content: " ";
+    border-radius: 9999em;
+    margin-left: -7.375rem;
+    margin-right: -4.25rem;
+    margin-block: 1.5rem;
+    aspect-ratio: 1 / 1;
+    height: 15.8125rem;
+    z-index: -10;
+    background: url("/assets/image-hero.png"), 
+                var(--bg-gradient-1);
+    background-repeat: no-repeat;
+    background-position: center 1rem, center;
+    background-size: 14.92rem 20.620625rem, auto;
+}
+/* end */
+
+@media (min-width: 39.375em) {
+    .main__content>.wrapper {
+        margin-block-end: 5.820625rem;
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .main__content__hero-image {
+        padding-inline: 0;
+        margin-inline-start: -.75rem;
+        margin-inline-end: -.625rem;
+    }
+    
+    .main__content__hero-image__circle {
+        content: " ";
+        aspect-ratio: none;
+        margin-left: -6.855625rem;
+        margin-right: -3.365625rem;
+        margin-block-start: 0.860625rem;
+        margin-block-end: 2.35625rem;
+        width: 13.53375rem;
+        height: 23.908125rem;
+        z-index: -10;
+        background: url("/assets/image-hero.png"), 
+                    var(--bg-gradient-1);
+        background-repeat: no-repeat;
+        background-position: center 3.2875rem, center;
+        background-size: 14.92rem 20.620625rem, auto;
+    }
+}
+
+.main__courses {
+    background: var(--bg-gradient-3);
+}
+
+.main__courses>.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-block-end: 5rem;   
+    gap: 1rem;
+}
+
+.main__courses__item {
+    flex: 1 1 15.625rem;
+    margin-top: 1.5rem;
+    padding-block-end: 2rem;
+    padding-inline: 1.75rem;
+    border-radius: 0.625rem;
+    display: grid;
+    justify-items: start;
+    gap: 1.5rem;
+    background-color: var(--clr-primary);
+    box-shadow: 0 1.5625rem 3.125rem hsla(233, 92%, 29%, 4.42%);
+}
+
+.main__courses__item:nth-child(1) {
+    padding-block-start: 1.5rem;
+    background: var(--bg-gradient-1);
+    color: var(--clr-primary);
+    box-shadow: none;
+}
+
+.main__courses__item>img {
+    margin-top: -1.5rem;
+}
+
+.main__courses__item__content>h4 {
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 35.8125em) {
+    .main__courses__item:nth-child(1) {
+        padding-top: 3.5rem;
+    }
+}
+
+/* footer */
+.footer {
+    background-color: var(--clr-secondary-1);
+    padding-block: 2.25rem;
+}
